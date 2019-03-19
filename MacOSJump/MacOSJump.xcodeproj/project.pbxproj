@@ -33,6 +33,8 @@
 		398EA49121EC8B9D0075F2F3 /* JumpRegistereWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398EA48F21EC8B9D0075F2F3 /* JumpRegistereWindowController.xib */; };
 		39A29F8C224096990021D415 /* JumpStatusWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A29F8A224096990021D415 /* JumpStatusWindowController.m */; };
 		39A29F8D224096990021D415 /* JumpStatusWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39A29F8B224096990021D415 /* JumpStatusWindowController.xib */; };
+		39A29F912240BBA00021D415 /* RecordRemarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A29F8F2240BBA00021D415 /* RecordRemarkController.m */; };
+		39A29F922240BBA00021D415 /* RecordRemarkController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39A29F902240BBA00021D415 /* RecordRemarkController.xib */; };
 		A4403418C8B29942D6480EE2 /* libPods-MacOSJump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 363499DF91722AEF7106C8AE /* libPods-MacOSJump.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,9 @@
 		39A29F89224096990021D415 /* JumpStatusWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JumpStatusWindowController.h; sourceTree = "<group>"; };
 		39A29F8A224096990021D415 /* JumpStatusWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpStatusWindowController.m; sourceTree = "<group>"; };
 		39A29F8B224096990021D415 /* JumpStatusWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JumpStatusWindowController.xib; sourceTree = "<group>"; };
+		39A29F8E2240BBA00021D415 /* RecordRemarkController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordRemarkController.h; sourceTree = "<group>"; };
+		39A29F8F2240BBA00021D415 /* RecordRemarkController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordRemarkController.m; sourceTree = "<group>"; };
+		39A29F902240BBA00021D415 /* RecordRemarkController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordRemarkController.xib; sourceTree = "<group>"; };
 		E9F2E15EF293D7501129EDB0 /* Pods-MacOSJump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSJump.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacOSJump/Pods-MacOSJump.release.xcconfig"; sourceTree = "<group>"; };
 		F3194C161FFA9DDD7824F447 /* Pods-MacOSJump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSJump.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacOSJump/Pods-MacOSJump.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +167,9 @@
 				39813DB7223B9D2900805151 /* HistoryRecordWindowController.h */,
 				39813DB8223B9D2900805151 /* HistoryRecordWindowController.m */,
 				39813DB9223B9D2900805151 /* HistoryRecordWindowController.xib */,
+				39A29F8E2240BBA00021D415 /* RecordRemarkController.h */,
+				39A29F8F2240BBA00021D415 /* RecordRemarkController.m */,
+				39A29F902240BBA00021D415 /* RecordRemarkController.xib */,
 			);
 			path = "History(检查记录)";
 			sourceTree = "<group>";
@@ -340,6 +348,7 @@
 			files = (
 				398EA46D21EC87B80075F2F3 /* Assets.xcassets in Resources */,
 				39813D81223B480400805151 /* ApplicitionWindowController.xib in Resources */,
+				39A29F922240BBA00021D415 /* RecordRemarkController.xib in Resources */,
 				398EA48121EC87F30075F2F3 /* MainWindowController.xib in Resources */,
 				39510B6A222E1643000A7A62 /* ChooseConmpanyWindowController.xib in Resources */,
 				392693AB223798780020343F /* FirstPageWindowController.xib in Resources */,
@@ -394,6 +403,7 @@
 				39813D7C223B47DA00805151 /* ApplicitionModel.m in Sources */,
 				398EA49021EC8B9D0075F2F3 /* JumpRegistereWindowController.m in Sources */,
 				398EA46B21EC87AD0075F2F3 /* MacOSJump.xcdatamodeld in Sources */,
+				39A29F912240BBA00021D415 /* RecordRemarkController.m in Sources */,
 				392693AA223798780020343F /* FirstPageWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

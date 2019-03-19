@@ -7,6 +7,7 @@
 //
 
 #import "HistoryRecordWindowController.h"
+#import "RecordRemarkController.h"
 
 @interface HistoryRecordWindowController ()<NSTableViewDelegate,NSTableViewDataSource>
 
@@ -14,10 +15,42 @@
 
 @property (strong,nonatomic) NSMutableArray *dataArray;
 
+@property(nonatomic,strong) NSPopover *firstPopover;
+
+@property(nonatomic,strong) RecordRemarkController *recordVC;
+
 
 @end
 
 @implementation HistoryRecordWindowController
+
+
+- (NSPopover *)firstPopover
+{
+    if(!_firstPopover)
+    {
+        _firstPopover=[[NSPopover alloc]init];
+        
+        _firstPopover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
+        
+        _firstPopover.contentViewController = self.recordVC;
+        
+        _firstPopover.behavior = NSPopoverBehaviorTransient;
+        
+        _firstPopover.contentSize = NSMakeSize(200, 80);
+
+    }
+    return _firstPopover;
+}
+
+- (RecordRemarkController *)recordVC
+{
+    if(!_recordVC)
+    {
+        _recordVC = [[RecordRemarkController alloc]init];
+    }
+    return _recordVC;
+}
 
 
 -(NSMutableArray *)dataArray{
@@ -52,6 +85,10 @@
 
 #pragma mark --- NSTableViewDelegate,NSTableViewDataSource
 
+-(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
+    
+    return 20;
+}
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
     
@@ -78,5 +115,23 @@
         return twoCell;
     }
 }
+
+
+#pragma mark --- NSOutlineViewDelegate
+
+//单击某一行
+- (void)tableViewSelectionDidChange:(NSNotification *)notification{
+    
+    NSTableView *tableView = notification.object;
+    
+    NSInteger selectRow = tableView.selectedRow;
+
+    NSLog(@"1:点击了第%ld行",selectRow);
+
+    [self.firstPopover showRelativeToRect:CGRectMake(0, 20*self.dataArray.count, 200, 80) ofView:self.window.contentView preferredEdge:NSRectEdgeMinX];
+
+}
+
+
 
 @end
