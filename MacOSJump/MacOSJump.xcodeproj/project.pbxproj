@@ -31,6 +31,8 @@
 		398EA48121EC87F30075F2F3 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398EA47F21EC87F30075F2F3 /* MainWindowController.xib */; };
 		398EA49021EC8B9D0075F2F3 /* JumpRegistereWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398EA48E21EC8B9D0075F2F3 /* JumpRegistereWindowController.m */; };
 		398EA49121EC8B9D0075F2F3 /* JumpRegistereWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398EA48F21EC8B9D0075F2F3 /* JumpRegistereWindowController.xib */; };
+		39A29F8C224096990021D415 /* JumpStatusWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A29F8A224096990021D415 /* JumpStatusWindowController.m */; };
+		39A29F8D224096990021D415 /* JumpStatusWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39A29F8B224096990021D415 /* JumpStatusWindowController.xib */; };
 		A4403418C8B29942D6480EE2 /* libPods-MacOSJump.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 363499DF91722AEF7106C8AE /* libPods-MacOSJump.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,9 @@
 		398EA48D21EC8B9D0075F2F3 /* JumpRegistereWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JumpRegistereWindowController.h; sourceTree = "<group>"; };
 		398EA48E21EC8B9D0075F2F3 /* JumpRegistereWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpRegistereWindowController.m; sourceTree = "<group>"; };
 		398EA48F21EC8B9D0075F2F3 /* JumpRegistereWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JumpRegistereWindowController.xib; sourceTree = "<group>"; };
+		39A29F89224096990021D415 /* JumpStatusWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JumpStatusWindowController.h; sourceTree = "<group>"; };
+		39A29F8A224096990021D415 /* JumpStatusWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpStatusWindowController.m; sourceTree = "<group>"; };
+		39A29F8B224096990021D415 /* JumpStatusWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JumpStatusWindowController.xib; sourceTree = "<group>"; };
 		E9F2E15EF293D7501129EDB0 /* Pods-MacOSJump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSJump.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacOSJump/Pods-MacOSJump.release.xcconfig"; sourceTree = "<group>"; };
 		F3194C161FFA9DDD7824F447 /* Pods-MacOSJump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSJump.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacOSJump/Pods-MacOSJump.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -252,11 +257,22 @@
 		398EA48C21EC8B2C0075F2F3 /* Others（其他） */ = {
 			isa = PBXGroup;
 			children = (
+				39A29F88224096830021D415 /* Status(状态) */,
 				39813DB6223B9D1100805151 /* History(检查记录) */,
 				39813D79223B47DA00805151 /* Process(进程管家) */,
 				39510B65222E0D80000A7A62 /* Choose(选择部门) */,
 			);
 			path = "Others（其他）";
+			sourceTree = "<group>";
+		};
+		39A29F88224096830021D415 /* Status(状态) */ = {
+			isa = PBXGroup;
+			children = (
+				39A29F89224096990021D415 /* JumpStatusWindowController.h */,
+				39A29F8A224096990021D415 /* JumpStatusWindowController.m */,
+				39A29F8B224096990021D415 /* JumpStatusWindowController.xib */,
+			);
+			path = "Status(状态)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +346,7 @@
 				39813DBB223B9D2900805151 /* HistoryRecordWindowController.xib in Resources */,
 				398EA47021EC87B80075F2F3 /* MainMenu.xib in Resources */,
 				398EA49121EC8B9D0075F2F3 /* JumpRegistereWindowController.xib in Resources */,
+				39A29F8D224096990021D415 /* JumpStatusWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +387,7 @@
 				3978B8D3222CFA8D00D28D95 /* AFNHelper.m in Sources */,
 				39510B6D222E43D4000A7A62 /* JumpCompanyModel.m in Sources */,
 				398EA47321EC87B80075F2F3 /* main.m in Sources */,
+				39A29F8C224096990021D415 /* JumpStatusWindowController.m in Sources */,
 				39813D80223B480400805151 /* ApplicitionWindowController.m in Sources */,
 				3978B8D6222CFBB300D28D95 /* SecurityNSString.m in Sources */,
 				39803FBC223F22E2004C03AC /* MytitleView.m in Sources */,

@@ -10,6 +10,7 @@
 #import "ApplicitionWindowController.h"
 #import "JumpRegistereWindowController.h"
 #import "HistoryRecordWindowController.h"
+#import "JumpStatusWindowController.h"
 
 @interface FirstPageWindowController ()
 
@@ -36,6 +37,9 @@
 
 @property (strong,nonatomic) HistoryRecordWindowController *historyWindowC;
 
+@property (strong,nonatomic) JumpStatusWindowController *jumpStatuswC;
+
+
 @end
 
 @implementation FirstPageWindowController
@@ -49,44 +53,55 @@
 
     self.historyWindowC = [[HistoryRecordWindowController alloc]initWithWindowNibName:@"HistoryRecordWindowController"];
 
+    self.jumpStatuswC = [[JumpStatusWindowController alloc]initWithWindowNibName:@"JumpStatusWindowController"];
+
+    
+    [self progressStatus];
 }
 
 
 - (IBAction)backAction:(NSButton *)sender {
     
+    
+    [self progressStatus];
+}
+
+
+-(void)progressStatus{
+    
     L2CWeakSelf(self);
+
+    self.progress.doubleValue = 0;
     
-    weakself.progress.doubleValue = 0;
-    
-    weakself.itemContent.stringValue = @"";
+    self.itemContent.stringValue = @"";
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5f repeats:YES block:^(NSTimer * _Nonnull timer) {
         
         NSInteger progressV = weakself.progress.doubleValue;
-
+        
         if(progressV >= 100){
             
             weakself.progress.doubleValue = 100;
             
-            [weakself.progress stopAnimation:sender];
+            [weakself.progress stopAnimation:nil];
             
             [weakself.timer invalidate];
-
+            
             weakself.timer = nil;
             
             self.againBtn.enabled = YES;
             
         }else{
             
-            [weakself.progress startAnimation:sender];
-            
+            [weakself.progress startAnimation:nil];
+
             [weakself.progress incrementBy:1];
             
             self.againBtn.enabled = NO;
             
         }
         weakself.itemContent.stringValue = [self isgo:progressV];
-
+        
         
     }];
 }
@@ -137,21 +152,13 @@
 
 
 
-#pragma mark --- 查看进程
+#pragma mark --- 状态
 
 - (IBAction)lookApplication:(NSToolbarItem *)sender {
     
-    [self.applicitionWd.window orderFront:nil];//显示要跳转的窗口
+    [self.jumpStatuswC.window orderFront:nil];//显示要跳转的窗口
     
-    [[self.applicitionWd window] center];//显示在屏幕中间
-}
-
-
-#pragma mark --- 状态
-
-- (IBAction)stateAction:(NSToolbarItem *)sender {
-    
-    JumpLog(@"111");
+    [[self.jumpStatuswC window] center];//显示在屏幕中间
 }
 
 

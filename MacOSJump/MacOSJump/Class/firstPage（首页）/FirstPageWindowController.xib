@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +20,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="捷普准入控制系统" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+        <window title="捷普准入控制系统" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="573" height="328"/>
@@ -167,14 +168,14 @@
                             <action selector="historyRecord:" target="-2" id="QAL-Ol-Nei"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="245CABC8-2950-467A-8F00-05DA8C228FF8" label="查看进程" paletteLabel="查看进程" image="NSTouchBarQuickLookTemplate" id="AUK-vL-Hch">
+                    <toolbarItem implicitItemIdentifier="245CABC8-2950-467A-8F00-05DA8C228FF8" label="状态" paletteLabel="状态" image="NSStatusNone" id="AUK-vL-Hch">
                         <nil key="toolTip"/>
                         <size key="minSize" width="48" height="48"/>
                         <size key="maxSize" width="48" height="48"/>
                         <button key="view" id="1QQ-De-Iq5">
-                            <rect key="frame" x="2" y="14" width="48" height="48"/>
+                            <rect key="frame" x="0.0" y="14" width="48" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarQuickLookTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="EI7-27-i8u">
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStatusNone" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="EI7-27-i8u">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -182,19 +183,6 @@
                         <connections>
                             <action selector="lookApplication:" target="-2" id="DSe-6f-OhU"/>
                         </connections>
-                    </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="8E0CEB67-3292-4F24-8F6B-534110CBC49A" label="状态" paletteLabel="状态" image="NSStatusNone" id="kyo-lR-eBp">
-                        <nil key="toolTip"/>
-                        <size key="minSize" width="48" height="48"/>
-                        <size key="maxSize" width="48" height="48"/>
-                        <button key="view" id="Mdf-as-v4n">
-                            <rect key="frame" x="0.0" y="14" width="48" height="48"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStatusNone" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="IPp-Nw-Icf">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                        </button>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="3A7E323E-5795-4597-B8AA-3046D8EBBF48" label="完善信息" paletteLabel="完善信息" image="NSUserGuest" id="w3t-eH-GCP">
                         <nil key="toolTip"/>
@@ -235,7 +223,6 @@
         <image name="123" width="88" height="64"/>
         <image name="NSStatusNone" width="16" height="16"/>
         <image name="NSTouchBarHistoryTemplate" width="18" height="30"/>
-        <image name="NSTouchBarQuickLookTemplate" width="22" height="30"/>
         <image name="NSUserGuest" width="32" height="32"/>
     </resources>
 </document>

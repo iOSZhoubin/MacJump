@@ -36,7 +36,7 @@
 @property (weak) IBOutlet NSButton *registerBtn;
 //登录按钮
 @property (weak) IBOutlet NSButton *loginBtn;
-//距离右侧距离  验证码98  账号15
+//距离右侧距离  验证码98  账号20
 @property (weak) IBOutlet NSLayoutConstraint *rightDistance;
 
 @property (strong,nonatomic) NSTimer *timer;
@@ -103,7 +103,7 @@
         
         [self.changeTypeBtn setTitle:@"短信验证码登录"];
         
-        self.rightDistance.constant = 15;
+        self.rightDistance.constant = 20;
         
         self.getCodeBtn.hidden = YES;
         
