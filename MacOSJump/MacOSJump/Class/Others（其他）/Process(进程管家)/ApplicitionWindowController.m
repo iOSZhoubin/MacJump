@@ -12,7 +12,7 @@
 @interface ApplicitionWindowController ()<NSTableViewDelegate,NSTableViewDataSource>
 
 @property (weak) IBOutlet NSTableView *tableView;
-
+//获取进程列表
 @property (strong,nonatomic) NSMutableArray<ApplicitionModel *> *dataArray;
 
 @end

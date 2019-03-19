@@ -10,13 +10,13 @@
 #import "RecordRemarkController.h"
 
 @interface HistoryRecordWindowController ()<NSTableViewDelegate,NSTableViewDataSource>
-
+//tableview
 @property (weak) IBOutlet NSTableView *tableView;
-
+//数据源
 @property (strong,nonatomic) NSMutableArray *dataArray;
-
+//提示框
 @property(nonatomic,strong) NSPopover *firstPopover;
-
+//提示框
 @property(nonatomic,strong) RecordRemarkController *recordVC;
 
 

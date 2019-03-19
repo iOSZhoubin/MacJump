@@ -165,41 +165,6 @@
     }
 }
 
-
-
-#pragma mark --- 注册
-
-- (IBAction)geristerAction:(NSButton *)sender {
-//
-//    if(self.ipcontent.stringValue.length < 1 || self.portcontent.stringValue.length < 1){
-//
-//        [self show:@"提示" andMessage:@"请先填写ip地址以及端口号再进行注册"];
-//
-//        return;
-//    }
-//
-//
-//    self.registereWindowC.ipAddress = self.ipcontent.stringValue;
-//
-//    self.registereWindowC.port = self.portcontent.stringValue;
-//
-//    [self.registereWindowC.window orderFront:nil];//显示要跳转的窗口
-//
-//    [[self.registereWindowC window] center];//显示在屏幕中间
-//
-////    [self.window orderOut:nil];//关闭当前窗口
-    
-}
-
-//-(void)loginAnimation{
-//    
-//    [NSAnimationContext beginGrouping];
-//    [[NSAnimationContext currentContext]setDuration:2.0f]; //执行时间
-//    [[self.window.contentView animator]setAlphaValue:0.1f]; //改变属性值  此项是设置透明度
-//    [NSAnimationContext endGrouping];
-//}
-
-
 -(void)loginAction{
     
     L2CWeakSelf(self);
